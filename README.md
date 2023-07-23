@@ -18,7 +18,7 @@ poem
   - On this page users can comment on the displayed poem.
 - Profile pictures for each poet
 - Profile pages for each user, displaying poems posted by the user
-  -The profile page allows a user to post a “status” on their
+  - The profile page allows a user to post a “status” on their
 own page.
 - Mobile navigation
 - Pagination for the poets, liked, poems, and profile pages.
