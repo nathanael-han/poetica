@@ -1,0 +1,15 @@
+{%extends "poetica/layout.html"%}
+
+{%block body%}
+
+<div class = "login">
+    <h2>Log In</h2>
+    
+    <form action= "{% url 'login' %}" method="POST">
+        {% csrf_token %}
+        <input type="text" name="username" placeholder="Username">
+        <input type="password" name="password" placeholder="Password">
+        <input type="submit" value="Login">
+    </form>
+</div>
+{%endblock%}

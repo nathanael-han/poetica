@@ -1,0 +1,459 @@
+body {
+	background-color: #2a2a2a;
+	font-family: 'EB Garamond', serif;
+	visibility: visible;
+}
+
+header {
+	top: 0;
+}
+
+main {
+	margin-left: 20px;
+	margin-right: 20px;
+}
+
+h2 {
+	color: rgb(228, 228, 228);
+}
+
+
+footer {
+	padding: 30px;
+	letter-spacing: 1px;
+	line-height: 28px;
+	font-size: 110%;
+	background-color: rgb(23, 23, 23);
+	bottom: 0;
+	color: white;
+	text-align: center;
+	margin-top: 60px;
+	overflow: hidden;
+}
+
+:root {
+	--nav-bg-color: #74839a;
+	--nav-color: rgb(50, 60, 82);
+}
+
+#logo {
+	margin-top: 20px;
+	margin-bottom: 5px;
+	width: 280px;
+	user-select: none;
+}
+
+.page_heading {
+	display: block;
+	margin-left: 25px;
+	margin-top: 60px;
+	font-family: 'Lato', sans-serif;
+}
+
+.page_heading2 {
+	text-align: center;
+	display: block;
+	margin-left: auto;
+	margin-top: auto;
+}
+
+#form_page {
+	padding: 30px;
+}
+
+.django-ckeditor-widget {
+	width: 30%;
+	opacity: 80%;
+}
+
+#dark_mode {
+	margin-top: 30px;
+	margin-left: 50px;
+	color: white;
+	font-family: 'Lato', sans-serif;
+
+}
+
+#dark_mode label {
+	font-size: 110%;
+	margin-left: 10px;
+}
+
+.form-check-input {
+	transform: scale(1.1);
+	background-color: #b2b2b2;
+	font-size: 110%;
+	margin-left: 10px;
+}
+
+.pagination>* {
+	color: rgb(228, 228, 228);
+}
+
+.pagination a {
+	color: rgb(228, 228, 228) !important;
+}
+
+
+.poem>* {
+	margin: 20px;
+	padding: 50px;
+	border-radius: 10px;
+	background: rgb(176, 176, 176);
+	background: linear-gradient(344deg, rgba(176, 176, 176, 0.17984787390029322) 3%, rgba(172, 172, 172, 0.17105021994134895) 33%, rgba(199, 199, 199, 0.2238361436950147) 97%);
+	color: rgb(228, 228, 228);
+	line-height: 20px;
+}
+
+
+.poem_title {
+	color: rgb(228, 228, 228);
+	font-size: 22px;
+	font-weight: bold;
+	font-family: 'Lato', 'serif';
+	margin: 0;
+}
+
+.poets_page {
+	margin-left: 20px;
+	min-height: 500px;
+}
+
+.poets_content {
+	color: rgb(228, 228, 228);
+	margin-left: 50px;
+	padding: 30px;
+
+}
+
+.poets_content a {
+	text-decoration: none;
+	color: rgb(228, 228, 228);
+	padding-left: 20px;
+}
+
+.poets_content a:hover {
+	color: rgb(39, 152, 205);
+}
+
+.poem span {
+	margin-right: 20px;
+}
+
+
+.btn-secondary {
+	height: 40px;
+	margin-right: 5px;
+}
+
+#deletion {
+	margin-top: 15px;
+}
+
+.poem_title a:hover {
+	color: rgb(70, 99, 146)
+}
+
+.poet {
+	font-size: 18px;
+}
+
+
+.poet {
+	font-size: 18px;
+}
+
+.poet a {
+	color: rgb(228, 228, 228);
+	text-decoration: none;
+}
+
+.poet a:hover {
+	color: rgb(159, 184, 202);
+	text-decoration: underline;
+}
+
+
+header nav ul {
+	list-style: none;
+	padding: 0;
+	margin-top: 0;
+	margin-bottom: 0;
+	padding-bottom: 5px;
+}
+
+header nav ul li a:link,
+header nav ul li a:visited,
+header nav ul li a:hover,
+header nav ul li a:active {
+	font-family: 'Lato', sans-serif;
+	background-color: #1a1b1c;
+	color: white;
+	display: block;
+	text-decoration: none;
+	padding: 0.5em;
+	border-bottom: 5px solid transparent;
+	padding-left: 20px;
+	padding-right: 20px;
+	font-size: 120%;
+	user-select: none;
+}
+
+header nav ul li a:hover,
+header nav ul li a:active {
+	background-color: #2A2A2A;
+	color: white;
+	border-top-color: #a7a9ae;
+	transition: 0.3s;
+}
+
+
+header nav {
+	background-image: url('../poetica/assets/close.svg');
+	margin-top: 20px;
+	padding-top: 60px;
+	background-color: #1a1b1c;
+	background-repeat: no-repeat;
+	background-position-x: 100%;
+	background-position-y: 5%;
+	background-size: 100px 40px;
+}
+
+header nav.collapsed {
+	background-image: url('../poetica/assets/white_pancake.svg');
+	background-position-y: 45%;
+	user-select: none;
+	background-color: #1a1b1c;
+}
+
+header nav.collapsed ul {
+	display: none;
+	background-color: #252525;
+}
+
+
+.registration {
+	text-align: center;
+	padding: 20px;
+}
+
+
+.registration h2,
+p,
+a {
+	color: rgb(228, 228, 228);
+}
+
+.registration p {
+	margin-top: 10px;
+}
+
+.registration a:hover {
+	color: rgb(98, 124, 167);
+}
+
+.registration input {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 20px;
+	width: 40%;
+}
+
+.login {
+	text-align: center;
+	padding: 20px;
+	min-height: 500px;
+}
+
+.login h2 {
+	color: rgb(228, 228, 228);
+}
+
+.login input {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 20px;
+	width: 40%;
+}
+
+.auth_links {
+	position: absolute;
+	right: 15px;
+	top: 35px;
+	font-family: 'Lato', sans-serif;
+}
+
+
+.auth_links a {
+	font-size: 90%;
+	padding: 8px;
+	text-decoration: none;
+	color: rgb(228, 228, 228);
+}
+
+.auth_links a:hover {
+	text-decoration: underline;
+}
+
+#cke_1_path {
+	display: none;
+}
+
+.pro_pic {
+	background-color: #4b5b7e;
+	object-fit: cover;
+	margin-bottom: 50px;
+	width: 100px;
+	height: 100px;
+	border-radius: 50%;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.poem_pic {
+	background-color: #4b5b7e;
+	margin-bottom: 20px;
+	width: 50px;
+	height: 50px;
+	object-fit: cover;
+	border-radius: 50px;
+	text-align: left;
+}
+
+.poem_link {
+	text-decoration: none;
+	color: rgb(201, 201, 201);
+}
+
+.pagination {
+	font-family: 'Lato', sans-serif;
+	margin-left: 30px;
+	margin-bottom: 20px;
+	font-size: 110%;
+}
+
+.pagination a {
+	margin: 10px;
+	color: black;
+	text-decoration: none;
+}
+
+.pagination a:hover {
+	margin: 10px;
+	color: black;
+	text-decoration: underline;
+}
+
+.comment_section {
+	margin-top: 40px;
+	width: 85%;
+	background-color: rgba(222, 222, 222, 0.245);
+	padding: 24px;
+	padding-top: 25px;
+	margin-left: 50px;
+	margin-bottom: 30px;
+}
+
+.comment_section a {
+	padding-left: 20px;
+	text-decoration: none;
+}
+
+.comment_section a:hover {
+	color: rgb(39, 152, 205);
+}
+
+.comment_form textarea {
+	width: 85%;
+	margin-left: 60px;
+	padding: 30px;
+	opacity: 70%;
+}
+
+.comment_form label {
+	display: none;
+	margin-left: 50px;
+}
+
+.comment_form input {
+	margin-left: 50px;
+	margin-bottom: 8px;
+	margin-top: 8px;
+	display: block;
+}
+
+.secondary_heading {
+	font-size: 18px;
+	font-weight: bold;
+	margin-top: 60px;
+	margin-left: 30px;
+	color: white;
+}
+
+#users_name {
+	text-align: center;
+	color: white;
+}
+
+#status {
+	text-align: center;
+	margin-bottom: 60px;
+	font-style: italic;
+}
+
+.status_form textarea {
+	width: 80%;
+	height: 120px;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	padding: 30px;
+}
+
+.status_form label {
+	display: none;
+	margin-left: 50px;
+}
+
+.status_form input {
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom: 60px;
+	margin-top: 8px;
+	display: block;
+}
+
+
+@media (min-width: 55em) {
+	header nav {
+		background-image: none;
+		padding-top: 5px;
+	}
+
+	header nav.collapsed {
+		background-image: none;
+	}
+
+	header nav.collapsed ul {
+		display: flex;
+	}
+
+	header nav ul {
+		display: flex;
+	}
+
+	header nav ul li {
+		flex-grow: 1;
+		flex-shrink: 1;
+		flex-basis: 10em;
+		background-color: var(--nav-bg-color);
+		text-align: center;
+	}
+}
+
+html {
+	visibility: visible !important;
+}

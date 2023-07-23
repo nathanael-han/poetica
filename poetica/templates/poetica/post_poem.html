@@ -1,0 +1,15 @@
+{% extends "poetica/layout.html" %}
+
+{% block body %}
+    <main>
+        <h2 class = "page_heading">Post a Poem</h2>
+        <div id = "form_page">
+            <form action="{% url 'post_poem'%}" method = "POST" >
+                {% csrf_token %}
+                {{form.media}}
+                {{form.as_p}}
+                <input type="submit" value = "Post Poem">
+            </form>    
+        </div>    
+    </main>
+{% endblock %}

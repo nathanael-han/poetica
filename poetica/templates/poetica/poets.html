@@ -1,0 +1,37 @@
+{% extends "poetica/layout.html" %}
+{% load static %} 
+
+{% block body %}
+    <div class = "poets_page">
+        <h2 class = "page_heading">Poets</h2>
+        <div class = "poets_content">
+            <h2 class = "page_heading2">{{current_user}}</h2>
+            {% for poet in page_obj%}
+            {% if poet.picture %}
+                <img class= "poem_pic" src="{{poet.picture}}" alt="User's profile picture">
+            {% else %}
+                <img class = "poem_pic" src="{% static 'poetica/assets/default.png' %}"/>                    
+            {% endif %}
+            <a class = "poet_page_link" href="{% url 'profile' poet.id%}"> 
+                {{poet.username}}  |   {{ poet.first_name }} {{ poet.last_name }}</a><br>
+            {% endfor %}
+        </div>
+        <div class="pagination">
+            <span class="step-links">
+                {% if page_obj.has_previous %}
+                    <a href="?page=1">&#8678; First</a>
+                    <a href="?page={{ page_obj.previous_page_number }}">Previous</a>
+                {% endif %}
+        
+                <span class="current">
+                    Page {{ page_obj.number }} of {{ page_obj.paginator.num_pages }}
+                </span>
+        
+                {% if page_obj.has_next %}
+                    <a href="?page={{ page_obj.next_page_number }}">Next</a>
+                    <a href="?page={{ page_obj.paginator.num_pages }}">Last &#8680;</a>
+                {% endif %}
+            </span>
+        </div>
+    </div>
+{% endblock %}

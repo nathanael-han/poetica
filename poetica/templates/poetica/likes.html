@@ -1,0 +1,61 @@
+{% extends "poetica/layout.html" %}
+{% load static %} 
+
+{% block body %}
+        <h2 class = "page_heading">Liked Poems</h2>
+        {% for poem in page_obj%}
+        <div class = "poem" data-aos = "fade-in">   {% comment %} AOS library animation — reference: https://redstapler.co/the-best-scroll-animation-library/ {% endcomment %}
+            <div >
+                {% if poem.poster.picture %}
+                    <img class= "poem_pic" src="{{poem.poster.picture}}" alt="User's profile picture">
+                {% else %}
+                    <img class = "poem_pic" src="{% static 'poetica/assets/default.png' %}"/>                    
+                {% endif %}
+                <h1 class = "poem_title">
+                    <a class = "poem_link" href="{% url 'poem_page' poem.id %}">{{ poem.title }}</a>
+                </h1>
+                <br>
+                <h2 class = "poet">
+                    <a class = "poet_link" href="{% url 'profile' poem.poster.id %}">{{ poem.poster.first_name }} {{ poem.poster.last_name }}</a>
+                </h2>
+                <p>
+                    {{poem.body | safe}}
+                </p>
+                {% if user.is_authenticated %}
+                <span id="like_count_{{ poem.id }}">{{poem.likes.count}}</span>
+                {% if  request.user in poem.likes.all%}
+                <button style="visibility: visible;" href = "{% url 'unlike_poem' poem.id %}" type="submit" class="btn btn-secondary" id="unlike_div_{{ poem.id }}" onclick="unlikePoem({{ poem.id }})"><p class = "heart">&#9829;</p></button>  
+                <button style="visibility: hidden;" href = "{% url 'like_poem' poem.id %}" type="submit" class="btn btn-secondary" id="like_div_{{ poem.id }}" onclick="likePoem({{ poem.id }})"><p class = "heart">&#9825;</p></button>
+                {% else %}
+                <button style="visibility: visible;" href = "{% url 'like_poem' poem.id %}" type="submit" class="btn btn-secondary" id="like_div_{{ poem.id }}" onclick="likePoem({{ poem.id }})"><p class = "heart">&#9825;</p></button>
+                <button style="visibility: hidden;" href = "{% url 'unlike_poem' poem.id %}" type="submit" class="btn btn-secondary" id="unlike_div_{{ poem.id }}" onclick="unlikePoem({{ poem.id }})"><p class = "heart">&#9829;</p></button>   
+                {% endif %}
+                {%endif%}
+                {% if  request.user == poem.poster %}
+                <form action="{% url 'delete_poem' poem.id %}" method="post">
+                    {% csrf_token %}
+                    <button type="submit" class="btn btn-dark" id="deletion">Delete</button>
+                </form>
+                {% endif %}
+            </div>
+        </div>
+        {% endfor %}
+
+        <div class="pagination">
+            <span class="step-links">
+                {% if page_obj.has_previous %}
+                    <a href="?page=1">&#8678; First</a>
+                    <a href="?page={{ page_obj.previous_page_number }}">Previous</a>
+                {% endif %}
+        
+                <span class="current">
+                    Page {{ page_obj.number }} of {{ page_obj.paginator.num_pages }}
+                </span>
+        
+                {% if page_obj.has_next %}
+                    <a href="?page={{ page_obj.next_page_number }}">Next</a>
+                    <a href="?page={{ page_obj.paginator.num_pages }}">Last &#8680;</a>
+                {% endif %}
+            </span>
+        </div>
+{% endblock %}
