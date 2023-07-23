@@ -4,7 +4,7 @@ Poetica is a forum/social network site implemented with Django. Users can share 
 ![Site Image](https://github.com/nathanael-han/poetica/blob/main/poetica-snap.png)
 
 
-## Requirements:[Django Ckeditor](https://django-ckeditor.readthedocs.io/en/latest/)
+### Requirements:[Django Ckeditor](https://django-ckeditor.readthedocs.io/en/latest/)
 
 Poetica's features include:
 - A home page where all the posted poems can be viewed
